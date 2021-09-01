@@ -1,31 +1,6 @@
+% DSM
 
-% DSM Code
-% Simulation time ~ 10 min
-clear all
-tic
-Nt = 1000; % number of time steps
-Nparticles = 1000;
-lambda = 0.785; %wavelength in um
-k = 2*pi/lambda;  
-tauc = 10; %decay time in us
-D = 1/(tauc*k^2); % Diffusion coefficient in um^2/us
-delta_t = 1; %time step in us
 dr = sqrt(2*D*delta_t); % random walk step length
-sSize = 1.74; % in um   
-
-% Scattering Volume 
-xmax = 1000; % um
-ymax = 1000; % um
-zmax = 1000; % um
-
-% Camera Location
-xcam = xmax/2; % center of camera in x in um
-ycam = ymax/2; % center of camera in y in um
-zcam = zmax*3; % position of camera in z in um
-
-% Camera Parameters
-Npixels = 20; % number of pixels in x and y
-dpixel = 1; % camera pixel size in um
 sp= sSize/dpixel;
 NsampPerSpeckle = ceil(sp);  
 NsampPerPixel = ceil(NsampPerSpeckle/sp);
@@ -36,7 +11,7 @@ Nsamp = Npixels*NsampPerPixel; % total samples in um
 xx = xcam + ones(Nsamp,1) * ( (([1:Nsamp] - 0.5*Nsamp)*dpixel/NsampPerPixel ) );
 yy = ycam + ( (([1:Nsamp]' - 0.5*Nsamp)*dpixel/NsampPerPixel ) ) * ones(1,Nsamp);
 
-for iter= 1:20
+for iter= 1:config
     iter
 % Initial Particle Position
 xp = rand(Nparticles,1)*xmax;
@@ -105,40 +80,3 @@ subplot(1,2,2)
 imagesc(Iframe2); colorbar
 title(sprintf('T_{exp}= %d μs',delta_t*Nt));
 
-%% K and sigmaK calculation
-
-flux = 1;      % photons/speckle/us
-B = 0;          % bias in e-
-sigmar = 1.5;   % in e-
-QE = 1;         
-ff= pi/4;   % fill factor
-Ip = I_DSM*flux/(ff*sp^2); 
-Id= 1e-6;   % in us
-
-
-for term=1:iter 
-
-Idark = Id*ones([Npixels*Npixels Nt]);
-Idark = cumsum(Idark,2);
-
-Iread = normrnd(B,sigmar,[Npixels*Npixels 1]);
-Iread = repmat(Iread,[1 Nt]);
-
-% Total Intensity
-
-Zp = poissrnd(QE*squeeze(Ip(:,:,term)))+round(Iread)+poissrnd(Idark);
-
-% Contrast 
-
-Kall(:,term) = std(Zp,[],1)./mean(Zp,1);
-
-end
-
-% Noise in Contrast
-
-sigmaKall = std(Kall',1);
-
-figure(3);
-semilogx(delta_t*Nt, sigmaKall)
-xlabel('T_{exp} (μs)'); ylabel('\sigma(K_{all})')
-toc
