@@ -1,4 +1,4 @@
-%% This is a demo of how sigma(K) with the BPM model
+%% This is a demo of how sigma(K) with DSM
 
 clc
 clear
