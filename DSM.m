@@ -110,5 +110,5 @@ end
 sigmaKall = std(Kall',1);
 
 figure(3);
-semilogx(delta_t*Nt, sigmaKall)
+semilogx(delta_t*(1:Nt), sigmaKall)
 xlabel('T_{exp} (μs)'); ylabel('\sigma(K_{all})')
