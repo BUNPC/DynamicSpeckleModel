@@ -16,6 +16,9 @@ Notes:
 Calculate the speckle size from sSize_Calculator.m and input the sSize value in the DSM.m code.
 
 
+The demo.m should output the speckle contrast as a function of exposure time, speckle pattern measured at exposure time 1 and 100 mus and the noise iin the speckle contrast sigma(K). 
+
+
 For any issue reporting or suggestions, please contact Sharvari Zilpelwar, sharz@bu.edu
 
 Updated 01/09/2021
