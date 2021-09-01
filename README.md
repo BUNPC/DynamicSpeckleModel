@@ -9,7 +9,7 @@ Our dynamic speckle model simulates the evolution of the speckle intensity patte
 To run the code:
 1) Download all the .m files in one folder
 2) Run demo.m
-  - To modify the scattering properties of the biological medium and the detector properties, change the corresponding parameters in ModelSettings.m
+  - To modify the scattering properties and the detector properties, change the corresponding parameters in ModelSettings.m
 
 Notes:
 
