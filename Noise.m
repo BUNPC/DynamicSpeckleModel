@@ -1,7 +1,7 @@
 %% K and sigmaK calculation
 
 ff= pi/4;   % fill factor
-Ip = I_DSM*flux/(ff*sp^2); 
+Ip = I_DSM*flux*ff/(sp^2); 
 
 
 for term=1:Nconfig
