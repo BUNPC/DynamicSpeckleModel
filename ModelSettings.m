@@ -27,8 +27,8 @@ ycam = ymax/2; % center of camera in y in um
 zcam = zmax*3; % position of camera in z in um
 
 % Noise Parameters
-flux = 1;      % photons/speckle/us
-B = 0;          % bias in e-
-sigmar = 1.5;   % in e-
+flux = 1; % photons/speckle/us
+B = 0;  % bias in e-
+sigmar = 1.5; % in e-
 QE = 1;         
-Id= 1e-6; 
+Id= 1e-6; % photons/speckle/us
