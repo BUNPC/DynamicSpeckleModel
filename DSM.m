@@ -1,6 +1,6 @@
 
 % DSM Code
-
+% Simulation time ~ 10 min
 clear all
 tic
 Nt = 1000; % number of time steps
