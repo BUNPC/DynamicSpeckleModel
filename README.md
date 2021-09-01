@@ -9,6 +9,6 @@ For any issue reporting or suggestions, please contact Sharvari Zilpelwar, sharz
 
 Notes:
 
-Calculate the speckle size from spcalculator.m and input the sSize in the DSM.m code.
+Calculate the speckle size from sSize_Calculator.m and input the sSize value in the DSM.m code.
 
 Updated 01/09/2021
