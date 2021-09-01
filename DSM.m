@@ -11,7 +11,7 @@ Nsamp = Npixels*NsampPerPixel; % total samples in um
 xx = xcam + ones(Nsamp,1) * ( (([1:Nsamp] - 0.5*Nsamp)*dpixel/NsampPerPixel ) );
 yy = ycam + ( (([1:Nsamp]' - 0.5*Nsamp)*dpixel/NsampPerPixel ) ) * ones(1,Nsamp);
 
-for iter= 1:config
+for iter= 1:Nconfig
     iter
 % Initial Particle Position
 xp = rand(Nparticles,1)*xmax;
