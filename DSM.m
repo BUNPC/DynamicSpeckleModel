@@ -2,7 +2,6 @@
 
 dr = sqrt(2*D*delta_t); % random walk step length
 dpixel = sSize/sp; % camera pixel size in um
-NsampPerSpeckle = ceil(sp);  
 NsampPerPixel = ceil(NsampPerSpeckle/sp);
 Nsamp = Npixels*NsampPerPixel; % total samples in um
 
