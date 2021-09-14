@@ -2,18 +2,18 @@
 
 clear all
 
-Nt = 1000; % number of time steps
-Nparticles = 1000;
+Nt = 100; % number of time steps
+Nparticles = 5000;
 lambda = 0.785; %wavelength in um
 k = 2*pi/lambda;  
 tauc = 10; %decay time in us
 D = 1/(tauc*k^2); % Diffusion coefficient in um^2/us
 delta_t = 1; %time step in us
-sSize = 1.9; % in um   
+sSize = 1.725; % in um   
 Nconfig = 20; 
 
 % Camera Parameters
-Npixels = 20; % number of pixels in x and y
+Npixels = 10; % number of pixels in x and y
 dpixel = 1; % camera pixel size in um
 
 % Scattering Volume 
@@ -29,6 +29,6 @@ zcam = zmax*3; % position of camera in z in um
 % Noise Parameters
 flux = 1; % photons/speckle/us
 B = 0;  % bias in e-
-sigmar = 1.5; % in e-
+sigmar = 1.4; % in e-
 QE = 1;         
 Id= 1e-6; % photons/speckle/us
