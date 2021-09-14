@@ -15,7 +15,6 @@ spratio=1;
 
 % Camera Parameters
 Npixels = 10; % number of pixels in x and y
-dpixel = sSize/spratio; % camera pixel size in um
 
 % Scattering Volume 
 xmax = 1000; % um
