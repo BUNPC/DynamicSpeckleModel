@@ -11,10 +11,11 @@ D = 1/(tauc*k^2); % Diffusion coefficient in um^2/us
 delta_t = 1; %time step in us
 sSize = 1.725; % in um   
 Nconfig = 20; 
+spratio=1;
 
 % Camera Parameters
 Npixels = 10; % number of pixels in x and y
-dpixel = 1; % camera pixel size in um
+dpixel = sSize/spratio; % camera pixel size in um
 
 % Scattering Volume 
 xmax = 1000; % um
