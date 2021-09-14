@@ -10,8 +10,8 @@ tauc = 10; %decay time in us
 D = 1/(tauc*k^2); % Diffusion coefficient in um^2/us
 delta_t = 1; %time step in us
 sSize = 1.725; % in um   
-Nconfig = 20; 
-sp=1;
+Nconfig = 10; 
+sp=2;
 NsampPerSpeckle = 4;  
 
 % Camera Parameters
@@ -28,7 +28,7 @@ ycam = ymax/2; % center of camera in y in um
 zcam = zmax*3; % position of camera in z in um
 
 % Noise Parameters
-flux = 1; % photons/speckle/us
+flux = 100; % photons/speckle/us
 B = 0;  % bias in e-
 sigmar = 1.4; % in e-
 QE = 1;         
