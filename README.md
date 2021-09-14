@@ -16,12 +16,13 @@ Notes:
 Calculate the speckle size from sSize_Calculator.m and input the sSize value in the DSM.m code.
 
 
-The demo.m outputs the speckle contrast as a function of exposure time, speckle pattern measured at exposure time 1 and 1000 mus and the noise in the speckle contrast sigma(K):
+The demo.m outputs the speckle contrast as a function of exposure time, speckle pattern measured at exposure time 1 and 100 mus and sigma(K) for 10 configurations:
 
-![KvsTexp](https://user-images.githubusercontent.com/55467463/131615693-29d2eb84-53ce-4a2d-b4d1-a07c05f1dc57.png)
+![fig1](https://user-images.githubusercontent.com/55467463/133275393-efddd1a5-9005-4a1f-aa60-de84e2d6dccc.png)
+![fig2](https://user-images.githubusercontent.com/55467463/133275405-88ea8415-0280-4a77-868a-04f1d125855a.png)
+![fig3](https://user-images.githubusercontent.com/55467463/133275649-1cbc9278-62d0-4500-9d92-8eaca08d54be.png)
 
-
-
+The sigma(K) is improved by increasing Nconfig.
 
 
 For any issue reporting or suggestions, please contact Sharvari Zilpelwar, sharz@bu.edu
