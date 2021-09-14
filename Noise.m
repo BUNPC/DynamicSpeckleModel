@@ -6,7 +6,7 @@ Ip = I_DSM*flux/(sp^2);
 
 for term=1:Nconfig
 
-Idark = Id*ones([Npixels*Npixels Nt]);
+Idark = delta_t*Id*ones([Npixels*Npixels Nt]);
 Idark = cumsum(Idark,2);
 
 Iread = normrnd(B,sigmar,[Npixels*Npixels 1]);
