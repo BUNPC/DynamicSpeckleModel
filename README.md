@@ -11,10 +11,6 @@ To run the code:
 2) Run demo.m
   - To modify the scattering properties and the detector properties, change the corresponding parameters in ModelSettings.m
 
-Notes:
-
-Calculate the speckle size from sSize_Calculator.m and input the sSize value in the DSM.m code.
-
 
 The demo.m outputs the speckle contrast as a function of exposure time, speckle pattern measured at exposure time 1 and 100 mus and sigma(K) for 10 configurations:
 
