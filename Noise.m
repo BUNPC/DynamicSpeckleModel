@@ -1,7 +1,7 @@
 %% K and sigmaK calculation
 
 
-Ip = I_DSM*flux/(sp^2); 
+Ip = 2*I_DSM*flux/(sp^2); 
 
 
 for term=1:Nconfig
